@@ -3,6 +3,7 @@
 {{$settings->site_name}} || e-Commerce HTML Template
 @endsection
 
+
 @section('content')
 
     <!--============================

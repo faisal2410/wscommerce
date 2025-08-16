@@ -16,6 +16,7 @@ use App\Models\ChildCategory;
 use App\Models\FlashSaleItem;
 use App\Models\HomePageSetting;
 use App\Http\Controllers\Controller;
+use App\Models\GeneralSetting;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Response;
 
@@ -23,9 +24,12 @@ class HomeController extends Controller
 {
     public function index()
     {
+
         $sliders = Cache::rememberForever('sliders', function(){
             return Slider::where('status', 1)->orderBy('serial', 'asc')->get();
         });
+
+       
 
         $flashSaleDate = FlashSale::first();
 
@@ -45,7 +49,7 @@ class HomeController extends Controller
         $homepage_secion_banner_one = Advertisement::where('key', 'homepage_secion_banner_one')->first();
 
 
-    
+
 
 
 
@@ -74,11 +78,12 @@ class HomeController extends Controller
                 'categoryProductSliderSectionTwo',
                 'categoryProductSliderSectionThree',
 
-                // 'homepage_secion_banner_one',
-                // 'homepage_secion_banner_two',
-                // 'homepage_secion_banner_three',
-                // 'homepage_secion_banner_four',
-                'recentBlogs'
+                'homepage_secion_banner_one',
+                'homepage_secion_banner_two',
+                'homepage_secion_banner_three',
+                'homepage_secion_banner_four',
+                'recentBlogs',
+
 
             ));
     }
