@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use File;
+use Illuminate\Support\Facades\File;
 
 class UserProfileController extends Controller
 {
@@ -42,8 +42,9 @@ class UserProfileController extends Controller
         $user->email = $request->email;
         $user->save();
 
-        toastr()->success('Profile Updated Successfully!');
-        return redirect()->back();
+        // toastr()->success('Profile Updated Successfully!');
+     
+        return redirect()->back()->with('success', 'Profile Updated Successfully!');
 
     }
 
@@ -58,7 +59,7 @@ class UserProfileController extends Controller
             'password' => bcrypt($request->password)
         ]);
 
-        toastr()->success('Profile Password Updated Successfully!');
-        return redirect()->back();
+        // toastr()->success('Profile Password Updated Successfully!');
+        return redirect()->back()->with('success', 'Profile Password Updated Successfully!');
     }
 }

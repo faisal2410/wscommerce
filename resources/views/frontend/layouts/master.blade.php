@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="{{asset('frontend/css/jquery.classycountdown.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/venobox.min.css')}}">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+   
 
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/responsive.css')}}">
@@ -131,6 +132,7 @@
     <script src="{{asset('frontend/js/venobox.min.js')}}"></script>
     <!--Toaster js-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+   
     <!--Sweetalert js-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--classycountdown js-->
@@ -154,6 +156,7 @@
     </script>
     @include('frontend.layouts.scripts')
     @stack('scripts')
+    @include("frontend.layouts.notifications")
 </body>
 
 </html>
