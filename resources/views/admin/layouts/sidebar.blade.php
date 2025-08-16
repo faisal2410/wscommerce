@@ -9,7 +9,7 @@
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
             <li class="dropdown active">
-                <a href="{{ route('admin.dashbaord') }}" class="nav-link"><i
+                <a href="{{ route('admin.dashboard') }}" class="nav-link"><i
                         class="fas fa-fire"></i><span>Dashboard</span></a>
 
             </li>
@@ -195,8 +195,8 @@
             </li>
 
             <li><a class="nav-link {{ setActive(['admin.messages.index']) }}"
-                href="{{ route('admin.messages.index') }}"><i class="fas fa-user"></i>
-                <span>Messages</span></a></li>
+                    href="{{ route('admin.messages.index') }}"><i class="fas fa-user"></i>
+                    <span>Messages</span></a></li>
 
 
 
