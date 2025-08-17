@@ -11,7 +11,7 @@
   <section id="wsus__dashboard">
     <div class="container-fluid">
         @include('frontend.dashboard.layouts.sidebar')
-     
+
 
       <div class="row">
         <div class="col-xl-9 col-xxl-10 col-lg-9 ms-auto">
@@ -47,7 +47,7 @@
 
                         </div>
                         <div class="col-xl-12">
-                            <button class="common_btn mb-4 mt-2" type="submit">upload</button>
+                            <button class="common_btn mb-4 mt-2" type="submit">update</button>
                         </div>
                     </form>
 
@@ -76,7 +76,7 @@
                             </div>
                             </div>
                             <div class="col-xl-12">
-                            <button class="common_btn" type="submit">upload</button>
+                            <button class="common_btn" type="submit">update</button>
                             </div>
                         </div>
                     </form>
