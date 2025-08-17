@@ -155,8 +155,8 @@
         })
     </script>
     @include('frontend.layouts.scripts')
-    @stack('scripts')
     @include("frontend.layouts.notifications")
+    @stack('scripts')
 </body>
 
 </html>

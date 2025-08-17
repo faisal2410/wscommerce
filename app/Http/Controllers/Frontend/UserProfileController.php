@@ -44,6 +44,7 @@ class UserProfileController extends Controller
 
         // toastr()->success('Profile Updated Successfully!');
 
+
         return redirect()->back()->with('success', 'Profile Updated Successfully!');
 
     }
@@ -60,6 +61,8 @@ class UserProfileController extends Controller
         ]);
 
         // toastr()->success('Profile Password Updated Successfully!');
+
+
 
         return redirect()->back()->with('success', 'Profile Password Updated Successfully!');
     }
