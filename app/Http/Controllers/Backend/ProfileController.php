@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -18,7 +19,10 @@ class ProfileController extends Controller
     {
        $request->validate([
         'name' => ['required', 'max:100'],
-        'email' => ['required', 'email', 'unique:users,email,'.Auth::user()->id],
+        'email' => [
+            'required',
+            'email',
+                Rule::unique('users', 'email')->ignore(Auth::id())],
         'image' => ['image', 'max:2048']
        ]);
 
