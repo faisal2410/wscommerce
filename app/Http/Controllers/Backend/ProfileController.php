@@ -22,7 +22,7 @@ class ProfileController extends Controller
         'email' => [
             'required',
             'email',
-                Rule::unique('users', 'email')->ignore(Auth::id())],
+            Rule::unique('users', 'email')->ignore(Auth::id())],
         'image' => ['image', 'max:2048']
        ]);
 

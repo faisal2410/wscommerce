@@ -23,13 +23,13 @@ class AboutController extends Controller
         About::updateOrCreate(
             ['id' => 1],
             [
-                'content' => $request->content
+                'content' => $request->input('content')
             ]
         );
 
-        toastr('updated successfully!', 'success', 'success');
+        // toastr('updated successfully!', 'success', 'success');
 
-        return redirect()->back();
+        return redirect()->back()->with('success', 'About content updated successfully!');
 
     }
 }
