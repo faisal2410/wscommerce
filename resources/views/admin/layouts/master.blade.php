@@ -109,6 +109,7 @@
     @endif
   </script>
 
+
   <!-- Dynamic Delete alart -->
 
   <script>
@@ -170,7 +171,7 @@
   </script>
 
 
-@include('admin.layouts.notifications')
+
   @stack('scripts')
 </body>
 </html>

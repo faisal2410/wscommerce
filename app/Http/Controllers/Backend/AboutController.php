@@ -31,5 +31,6 @@ class AboutController extends Controller
 
         return redirect()->back()->with('success', 'About content updated successfully!');
 
+
     }
 }

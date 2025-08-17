@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="{{asset('frontend/css/ranger_style.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/jquery.classycountdown.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/venobox.min.css')}}">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    {{-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"> --}}
 
 
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
@@ -66,7 +66,11 @@
     <!--============================
        Main Content End
     ==============================-->
+@if(session('success'))
 
+        {{ session('success') }}
+
+@endif
 
     <section class="product_popup_modal">
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
@@ -131,7 +135,7 @@
     <!--venobox js-->
     <script src="{{asset('frontend/js/venobox.min.js')}}"></script>
     <!--Toaster js-->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    {{-- <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> --}}
 
     <!--Sweetalert js-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -155,7 +159,7 @@
         })
     </script>
     @include('frontend.layouts.scripts')
-    @include("frontend.layouts.notifications")
+
     @stack('scripts')
 </body>
 
