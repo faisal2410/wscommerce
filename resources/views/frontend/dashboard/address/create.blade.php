@@ -35,8 +35,10 @@
                     <div class="wsus__add_address_single">
                       <label>countery <b>*</b></label>
                       <div class="wsus__topbar_select">
+                        
                         <select class="select_2" name="country">
                           <option>Select</option>
+
                             @foreach (config('settings.country_list') as $country)
                                 <option value="{{$country}}">{{$country}}</option>
                             @endforeach
