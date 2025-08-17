@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="{{asset('frontend/css/jquery.classycountdown.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/venobox.min.css')}}">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-   
+
 
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/responsive.css')}}">
@@ -132,7 +132,7 @@
     <script src="{{asset('frontend/js/venobox.min.js')}}"></script>
     <!--Toaster js-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-   
+
     <!--Sweetalert js-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--classycountdown js-->
@@ -142,13 +142,13 @@
     <!--main/custom js-->
     <script src="{{asset('frontend/js/main.js')}}"></script>
 
-    <script>
+    {{-- <script>
         @if ($errors->any())
             @foreach ($errors->all() as $error)
                 toastr.error("{{$error}}")
             @endforeach
         @endif
-    </script>
+    </script> --}}
     <script>
         $(document).ready(function(){
             $('.auto_click').click();
